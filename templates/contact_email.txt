@@ -1,0 +1,8 @@
+A new inquiry:
+Sender: {{ sender }}
+Subject: {{ subject }}
+Message:
+{{ text }}
+
+--
+The Sprint Page

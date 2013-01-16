@@ -1,0 +1,14 @@
+{% load widget_tweaks %}
+
+<div class="control-group {% if field.errors %}{{ 'error' }}{% endif %}">
+  {{ field.label_tag }}
+  {{ field|add_class:"input-xlarge" }}
+  <span class="help-inline error">
+    {% if field.errors %}
+      {{ field.errors|join:", " }}
+    {% endif %}
+  </span>
+  <span class="help-block muted">
+    {{ field.help_text }}
+  </span>
+</div>
