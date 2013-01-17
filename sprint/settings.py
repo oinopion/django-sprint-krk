@@ -102,6 +102,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+    'gunicorn',
     'sprint',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
