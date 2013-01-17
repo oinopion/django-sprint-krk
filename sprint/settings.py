@@ -1,4 +1,5 @@
 # Django settings for sprint project.
+import os
 from os.path import dirname, join
 
 CODE_ROOT = dirname(__file__)
@@ -101,6 +102,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'raven.contrib.django',
     'widget_tweaks',
     'gunicorn',
     'sprint',
@@ -109,6 +111,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+SENTRY_DSN = os.environ.get('SENTRY_DNS', '')
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
