@@ -1,17 +1,15 @@
-from django.conf.urls import patterns, include, url
+from django.conf import settings
+from django.conf.urls import patterns, url
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
 
 urlpatterns = patterns('sprint.views',
     url(r'^$', 'home', name='home'),
     url(r'^contact$', 'contact', name='contact'),
     url(r'^contact/done$', 'contact_done', name='contact_done'),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
 )
+
+if not settings.DEBUG:
+    static_opts = {'document_root': settings.STATIC_ROOT}
+    urlpatterns += patterns('django.views.static',
+        url(r'^static/(?P<path>.*)$', 'serve', static_opts),
+    )
