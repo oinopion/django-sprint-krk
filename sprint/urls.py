@@ -6,6 +6,7 @@ urlpatterns = patterns('sprint.views',
     url(r'^$', 'home', name='home'),
     url(r'^contact$', 'contact', name='contact'),
     url(r'^contact/done$', 'contact_done', name='contact_done'),
+    url(r'^code-of-conduct$', 'code_of_conduct', name='code_of_conduct'),
 )
 
 if not settings.DEBUG:

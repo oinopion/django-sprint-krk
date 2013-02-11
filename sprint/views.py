@@ -16,3 +16,4 @@ class ContactFormView(FormView):
 home = TemplateView.as_view(template_name='home.html')
 contact = ContactFormView.as_view()
 contact_done = TemplateView.as_view(template_name='contact_done.html')
+code_of_conduct = TemplateView.as_view(template_name='code_of_conduct.html')
