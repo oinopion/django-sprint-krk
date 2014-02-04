@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
     <div class="hero-unit">
@@ -7,7 +8,7 @@
         <h2>15th and 16th of February 2014</h2>
 
         <p>Come and join us in an effort to smash Django bugs.
-          We'll have room, Internet, some energy drinks and lots
+            We'll have room, Internet, some energy drinks and lots
             of Djangonauts. </p>
 
         <p>We'll be there from 10am, official kick-off at noon. Coding will take
@@ -17,8 +18,10 @@
     <div class="row">
         <div class="span4">
             <h2>Registration</h2>
+
             <p>Help us organize this event and fill the registration form on
-              Eventbrite.</p>
+                Eventbrite.</p>
+
             <p><a href="https://django-sprint-krk-2014.eventbrite.com/"
                   class="btn btn-primary btn-large">Register</a></p>
         </div>
@@ -26,24 +29,56 @@
             <h2>Location</h2>
 
             <p><strong>Kraków, Wyczółkowskiego 7,
-                <a href="https://getbase.com/" class="external">Base</a></strong></p>
+                <a href="https://getbase.com/"
+                   class="external">Base</a></strong></p>
 
-            <p>This time we will be sprinting from spacious office just by the Błonia greens,
-                a very convenient location. It is located near the city center, just a
+            <p>This time we will be sprinting from spacious office just by the
+                Błonia greens,
+                a very convenient location. It is located near the city center,
+                just a
                 short tram ride from the main station (Kraków Główny).</p>
 
             <p>Big thanks to Base for letting us in!</p>
-            
+
         </div>
 
         <div class="span4">
             <h2>Map</h2>
+
             <p>Click on map below to see bigger version.</p>
+
             <p><a class="external" href="https://goo.gl/maps/9mttE">
                 <img src="http://maps.googleapis.com/maps/api/staticmap?center=50.057291,19.915006&size=340x200&sensor=false&markers=50.057291,19.915006&zoom=14"
-                        width="340" height="200"/>
+                     width="340" height="200"/>
             </a></p>
         </div>
 
+    </div>
+    <div class="row">
+        <div class="span12">
+            <h2>Sponsors</h2>
+
+            <div class="row">
+                <div class="span6">
+                    <h3>
+                        <a href="https://www.megiteam.pl/" class="external">
+                            MegiTeam
+                        </a>
+                    </h3>
+
+                    <p>
+                        <a href="https://www.megiteam.pl/" class="external">
+                            <img src="{% static 'img/logo-megiteam.png' %}"
+                                 alt="MegiTeam">
+                        </a>
+                    </p>
+
+                    <p>
+                        MegiTeam is company providing professional Django
+                        hosting. You should check them out!
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
